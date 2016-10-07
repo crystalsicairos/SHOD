@@ -96,7 +96,7 @@ body {
       padding: 11px; }
 
 .homepage-container {
-  display: block;
+  display: none;
   background-image: url("../images/shakes-bkg.png");
   background-size: 90%;
   background-repeat: no-repeat;
@@ -123,38 +123,47 @@ body {
       border-radius: 4px;
       font-size: 20px;
       font-weight: 600;
-      cursor: pointer; }
+      cursor: pointer;
+      width: 100%;
+      border: 0;
+      outline: none; }
       .homepage-container .homepage-buttons .button:active {
         box-shadow: inset 0px 1px 21px #307314; }
 
 .customization-container {
   display: none;
   padding-top: 40px; }
-  .customization-container .customization-tabs:before, .customization-container .customization-tabs:after {
-    content: "";
-    display: table; }
-  .customization-container .customization-tabs:after {
-    clear: both; }
-  .customization-container .customization-tabs a {
-    float: left;
-    border: 1px solid #1d7102;
-    display: block;
-    width: 22%;
-    text-align: center;
-    text-decoration: none;
-    color: #1d7102;
-    font-weight: 600;
-    margin: 1%;
-    background: #ffffff;
-    text-transform: uppercase;
-    padding: 8px 0;
-    font-size: .9em; }
-    .customization-container .customization-tabs a.active {
-      background-color: #6cc24a;
-      color: #fff; }
+  .customization-container .customization-tabs {
+    max-width: 300px;
+    margin: 0 auto; }
+    .customization-container .customization-tabs:before, .customization-container .customization-tabs:after {
+      content: "";
+      display: table; }
+    .customization-container .customization-tabs:after {
+      clear: both; }
+    .customization-container .customization-tabs a {
+      float: left;
+      border: 1px solid #1d7102;
+      display: block;
+      width: 22.5%;
+      text-align: center;
+      text-decoration: none;
+      color: #1d7102;
+      font-weight: 600;
+      margin: 1%;
+      background: #ffffff;
+      text-transform: uppercase;
+      padding: 8px 0;
+      font-size: .8em; }
+      .customization-container .customization-tabs a.active {
+        background-color: #6cc24a;
+        color: #fff; }
+      .customization-container .customization-tabs a:last-child {
+        margin-right: 0; }
   .customization-container .customization-panel {
     padding-top: 20px; }
     .customization-container .customization-panel .list {
+      display: none;
       padding-left: 20px; }
       .customization-container .customization-panel .list li {
         list-style-type: none;
@@ -191,6 +200,8 @@ body {
         .customization-container .customization-panel .list li .checkbox-custom:focus + .checkbox-custom-label {
           outline: 1px solid #888;
           /* focus style */ }
+      .customization-container .customization-panel .list.active-list {
+        display: block; }
   .customization-container .next {
     color: #6cc24a;
     text-decoration: none;
@@ -457,7 +468,7 @@ body {
       color: #6cc24a; }
 
 .welcome-container {
-  display: none;
+  display: block;
   background-image: url("../images/shakes-bkg.png");
   background-size: 90%;
   background-repeat: no-repeat;

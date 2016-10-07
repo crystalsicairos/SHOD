@@ -1,5 +1,5 @@
 .homepage-container {
-	display: block;
+	display: none;
 	background-image: url("../images/shakes-bkg.png");
 	background-size: 90%;
 	background-repeat: no-repeat;
@@ -28,6 +28,9 @@
 			font-size: 20px;
 			font-weight: 600;
 			cursor: pointer;
+			width: 100%;
+			border:0;
+			outline: none;
 			&:active {
 				box-shadow: inset 0px 1px 21px #307314;
 			}

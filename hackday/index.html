@@ -13,9 +13,9 @@
 			<header class="global-header">
 				<div class="inner-header">
 					<a href="void" class="hamburger"><i class="fa fa-bars"></i></a>
-					<a href="/" class="logo"><span class="icon">Shakeology</span> <span class="text">On Demand</span></a>
+					<a href="javascript:void(0)" class="logo click-trigger" data-open-container="homepage-container"><span class="icon">Shakeology</span> <span class="text">On Demand</span></a>
 				</div>
-				<div class="progress-bar"><i class="fa fa-coffee"></i> Order In Progress</div>
+				<div class="progress-bar" data-open-container="current-order-container"><i class="fa fa-coffee"></i> Order In Progress</div>
 				<div class="side-menu">
 					<ul>
 						<li><a href="void">Home</a></li>
@@ -27,12 +27,12 @@
 			</header>
 			<div class="content-wrapper">
 				
-				<div class="welcome-container">
+				<div class="welcome-container container" id="welcome-container">
 					<p class="welcome-msg">Welcome to <br/>Shakeology on Demand!</p>
 					<p class="name">please provide your name</p>
 					<form>
 						<div class="input-wrapper">
-							<input type="text" placeholder="name"/>
+							<input type="text" class="submit-name-text" placeholder="name"/>
 						</div>
 						<div class="button-container">
 							<button class="button submit-name">submit name</button>
@@ -40,32 +40,32 @@
 					</form>
 				</div>
 
-				<div class="bar-closed-container">
+				<div class="bar-closed-container container" id="bar-closed-container">
 					<i class="fa fa-clock-o"></i>
 					<p class="closed-msg">We know you really need your shake, but the bar is closed </p>
 					<p class="check-msg">Check back soon!</p>
 					
 				</div>
 				
-				<div class="homepage-container">
-					<p class="welcome-msg">Welcome to <br/>Shakeology on Demand!</p>
+				<div class="homepage-container container" id="homepage-container">
+					<p class="welcome-msg">Welcome <span class="name"></span> to <br/>Shakeology on Demand!</p>
 					<div class="homepage-buttons">
-						<a href="void" class="button custom">custom order</a>
-						<a href="void" class="button menu">menu</a>
-						<a href="void" class="button randomize">randomize</a>
+						<button class="button click-trigger custom" data-open-container="customization-container">custom order</button>
+						<button class="button click-trigger menu" data-open-container="menu-container">menu</button>
+						<button class="button click-trigger randomize" data-open-container="customization-container">randomize</button>
 					</div>
 				</div>
 
-				<div class="customization-container">
+				<div class="customization-container container" id="customization-container">
 					<div class="customization-tabs">
-						<a href="void" class="active">flavor</a>
-						<a href="void">base</a>
-						<a href="void">add-ons</a>
-						<a href="void">boost</a>
+						<a href="javascript:void(0)" data-open-custom="flavor-list" class="active">flavor</a>
+						<a href="javascript:void(0)" data-open-custom="base-list">base</a>
+						<a href="javascript:void(0)" data-open-custom="add-ons-list">add-ons</a>
+						<a href="javascript:void(0)" data-open-custom="boost-list">boost</a>
 					</div>
 			
 					<div class="customization-panel">
-						<ul class="list">
+						<ul class="list flavor active-list" id="flavor-list">
 							<li>
 								<input id="chocolate" class="checkbox-custom" name="chocolate" type="checkbox" value="chocolate">
 								<label for="chocolate"class="checkbox-custom-label">chocolate</label>
@@ -95,10 +95,67 @@
 								<label for="cafe-latte"class="checkbox-custom-label">cafe latte</label>
 							</li>
 						</ul>
-						<a href="void" class="next">Choose Base <i class="fa fa-angle-double-right"></i></a>
+						<ul class="list base" id="base-list">
+							<li>
+								<input id="non-fat-milk" class="checkbox-custom" name="non-fat-milk" type="checkbox" value="non-fat-milk">
+								<label for="non-fat-milk" class="checkbox-custom-label">Non Fat Milk</label>
+							</li>
+							<li>
+								<input id="one-percent-milk" class="checkbox-custom" name="one-percent-milk" type="checkbox" value="one-percent-milk">
+								<label for="one-percent-milk" class="checkbox-custom-label">1% Percent Milk</label>
+							</li>
+							<li>
+								<input id="two-percent-milk" class="checkbox-custom" name="two-percent-milk" type="checkbox" value="two-percent-milk">
+								<label for="two-percent-milk" class="checkbox-custom-label">2% Percent Milk</label>
+							</li>
+							<li>
+								<input id="water" class="checkbox-custom" name="water" type="checkbox" value="water">
+								<label for="water" class="checkbox-custom-label">H20</label>
+							</li>
+							<li>
+								<input id="almond-milk" class="checkbox-custom" name="almond-milk" type="checkbox" value="almond-milk">
+								<label for="almond-milk"class="checkbox-custom-label">Almond Milk</label>
+							</li>
+							<li>
+								<input id="coffee" class="checkbox-custom" name="coffee" type="checkbox" value="coffee">
+								<label for="coffee" class="checkbox-custom-label">Coffee</label>
+							</li>
+						</ul>
+						<ul class="list add-ons" id="add-ons-list">
+							<li>
+								<input id="cinnamon" class="checkbox-custom" name="cinnamon" type="checkbox" value="cinnamon">
+								<label for="cinnamon"class="checkbox-custom-label">Cinnamon</label>
+							</li>
+							<li>
+								<input id="strawberries" class="checkbox-custom" name="vegan-chocolate" type="checkbox" value="strawberries">
+								<label for="strawberries"class="checkbox-custom-label">Strawberries</label>
+							</li>
+							<li>
+								<input id="blueberries" class="checkbox-custom" name="blueberries" type="checkbox" value="blueberries">
+								<label for="blueberries"class="checkbox-custom-label">Blueberries</label>
+							</li>
+							<li>
+								<input id="banana" class="checkbox-custom" name="tropical-strawberry" type="checkbox" value="banana">
+								<label for="banana"class="checkbox-custom-label">Banana</label>
+							</li>
+						</ul>
+						<ul class="list boost" id="boost-list">
+							<li>
+								<input id="digestive-health" class="checkbox-custom" name="digestive-health" type="checkbox" value="digestive-health">
+								<label for="digestive-health"class="checkbox-custom-label">Digestive Health</label>
+							</li>
+							<li>
+								<input id="focused-energy" class="checkbox-custom" name="focused-energy" type="checkbox" value="focused-energy">
+								<label for="focused-energy"class="checkbox-custom-label">Focused Energy</label>
+							</li>
+							<li>
+								<input id="power-greens" class="checkbox-custom" name="power-greens" type="checkbox" value="power-greens">
+								<label for="power-greens"class="checkbox-custom-label">Power Greens</label>
+							</li>
+						</ul>
 					</div>
 				</div>
-				<div class="menu-container">
+				<div class="menu-container container" id="menu-container">
 					<h2>Menu</h2>
 					<div class="menu-buttons">
 						<a class="menu-button ashley-special"><span>Ashley Special</span></a>
@@ -120,7 +177,7 @@
 					</div>
 				</div>
 				
-				<div class="review-container">
+				<div class="review-container container" id="review-container" >
 					<h2>Confirm Your Order</h2>
 					<div class="review-panel">
 						<p class="review-item flavor">Flavor: <span>chocolate</span></p>
@@ -137,14 +194,14 @@
 					</div>
 				</div>
 
-				<div class="confirmation-container">
+				<div class="confirmation-container container" id="confirmation-container">
 					<div class="confirmation-panel">
 						<i class="fa fa-check-circle"></i>
 						<p class="status">Order Status: <span>In progress</span></p>
 					</div>
 				</div>
 
-				<div class="past-orders-container">
+				<div class="past-orders-container container" id="past-orders-container">
 					<div class="current-order-panel order-panel">
 						<h2>Current Order</h2>
 						<div class="current-order-list order-list">
@@ -205,7 +262,7 @@
 					</div>
 				</div>
 
-				<div class="current-order-container">
+				<div class="current-order-container container" id="current-order-container">
 					<div class="current-order-progress">
 						<span class="first-step"><i class="fa fa-check-circle-o"></i></span>
 						<span class="line"></span>
@@ -230,7 +287,7 @@
 					</div>
 				</div>
 
-				<div class="badge-container">
+				<div class="badge-container container" id="badge-container">
 					<h2>Badges</h2>
 					<div class="badge-buttons">
 						<a class="badge-button one-week achieved"><i class="fa fa-calendar-check-o"></i><span>One Week</span></a>
@@ -245,9 +302,9 @@
 			</div>
 			<div class="bottom-navigation">
 				<div class="navigation-buttons">
-					<a href="void" class="button homepage"><i class="fa fa-home"></i></a>
-					<a href="void" class="button past-orders"><i class="fa fa-file-text-o"></i></a>
-					<a href="void" class="button badges"><i class="fa fa-trophy"></i></a>
+					<a href="javascript:void(0)" class="button click-trigger nav-homepage" data-open-container="homepage-container"><i class="fa fa-home"></i></a>
+					<a href="javascript:void(0)" class="button click-trigger nav-past-orders" data-open-container="past-orders-container"><i class="fa fa-file-text-o"></i></a>
+					<a href="javascript:void(0)" class="button click-trigger nav-badges" data-open-container="badge-container"><i class="fa fa-trophy"></i></a>
 				</div>
 			</div>
 		</div>

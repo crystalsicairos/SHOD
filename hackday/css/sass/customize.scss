@@ -2,12 +2,14 @@
 	display: none;
 	padding-top: 40px;
 	.customization-tabs {
+		max-width: 300px;
+		margin: 0 auto;
 		@include clearfix;
 		a {
 			float: left;
 			border: 1px solid $darkgreen;
 			display: block;
-			width: 22%;
+			width: 22.5%;
 			text-align: center;
 			text-decoration: none;
 			color: $darkgreen;
@@ -16,16 +18,20 @@
 			background: $white;
 			text-transform: uppercase;
 			padding: 8px 0;
-			font-size: .9em;
+			font-size: .8em;
 			&.active {
 				background-color: $green;
 				color: #fff;
+			}
+			&:last-child{
+				margin-right: 0;
 			}
 		}
 	}
 	.customization-panel {
 		padding-top: 20px;
 		.list {
+			display: none;
 			padding-left: 20px;
 			li {
 				list-style-type: none;
@@ -75,6 +81,9 @@
 				}
 
 
+			}
+			&.active-list{
+				display: block;
 			}
 		}
 	}
