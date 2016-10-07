@@ -1,0 +1,87 @@
+.menu-container {
+	display: none;
+
+	padding-top: 20px;
+	max-width: 300px;
+	margin: 0 auto;
+	h2 {
+		color: #605f5f;
+		text-align: center;
+		font-size: 1.1em;
+		margin: 0 0 5px 0;
+	}
+	.menu-buttons {
+		@include clearfix;
+		.menu-button {
+			display: block;
+			width: 47%;
+			float: left;
+			height: 160px;
+			background-position: -31px 10px;
+			background-size: 140px;
+			background-repeat: no-repeat;
+			background-color: #ecf0f3;
+			border: 1px solid #dfe2e5;
+			margin: 1%;
+			span {
+				display: block;
+				font-size: .8em;
+				text-align: center;
+				margin-top: 117px;
+			}
+			&.ashley-special {
+				background-image: url("../images/shakes/ashley.jpg");
+			}
+			&.choco-blast {
+				background-image: url("../images/shakes/funkymonkey.jpg");
+			}
+			&.daphne-special {
+				background-image: url("../images/shakes/daphne.jpg");
+			}
+			&.dbz {
+				background-image: url("../images/shakes/dbz.jpg");
+			}
+			&.dragons-den {
+				background-image: url("../images/shakes/ashley.jpg");
+			}
+			&.funky-monkey {
+				background-image: url("../images/shakes/funkymonkey.jpg");
+			}
+			&.garrison {
+				background-image: url("../images/shakes/garrisons-choco.jpg");
+			}
+			&.incredible-hulk {
+				background-image: url("../images/shakes/ashley.jpg");
+			}
+			&.lite-fit {
+				background-image: url("../images/shakes/litefit.jpg");
+			}
+			&.nima-choco {
+				background-image: url("../images/shakes/naimas-choco-wreck.jpg");
+			}
+			&.recess-cup {
+				background-image: url("../images/shakes/ashley.jpg");
+			}
+			&.skye-special {
+				background-image: url("../images/shakes/theraaz.jpg");
+			}
+			&.strawberries-creme {
+				background-image: url("../images/shakes/strawberryIsland.jpg");
+			}
+			&.strawberry-island {
+				background-image: url("../images/shakes/strawberryIsland.jpg");
+			}
+			&.vanilla-bliss {
+				background-image: url("../images/shakes/vanilla-bliss.jpg");
+			}
+			&.vanilla-creme {
+				background-image: url("../images/shakes/recipes_iced_mocha.jpg");
+			}
+
+
+			&:active {
+				box-shadow: inset 0px 1px 21px #a6bdbf;
+			}
+		}
+	}
+}

@@ -1,0 +1,21 @@
+.confirmation-container {
+	padding-top: 20px;
+	display: none;
+	.confirmation-panel {
+		text-align: center;
+		i {
+			font-size: 9em;
+			text-align: center;
+			color: $green;
+		}
+		.status {
+			margin-top: 2em;
+			font-size: 1em;
+			text-transform: uppercase;
+			font-weight: bold;
+			span {
+				color: $gold;
+			}
+		}
+	}
+}

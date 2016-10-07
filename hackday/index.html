@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Shakeology on Demand</title>
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<link rel="stylesheet" href="./css/main.css">
+		<script type="text/javascript" src="./js/main.js"></script>
+		<meta name="viewport" id="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=1">
+	</head>
+	<body>
+		<div class="main-container">
+			<header class="global-header">
+				<div class="inner-header">
+					<a href="void" class="hamburger"><i class="fa fa-bars"></i></a>
+					<a href="/" class="logo"><span class="icon">Shakeology</span> <span class="text">On Demand</span></a>
+				</div>
+				<div class="progress-bar"><i class="fa fa-coffee"></i> Order In Progress</div>
+				<div class="side-menu">
+					<ul>
+						<li><a href="void">Home</a></li>
+						<li><a href="void">Ingredients</a></li>
+						<li><a href="void">Shake Ideas</a></li>
+						<li><a href="void">My Orders</a></li>
+					</ul>
+				</div>
+			</header>
+			<div class="content-wrapper">
+				
+				<div class="welcome-container">
+					<p class="welcome-msg">Welcome to <br/>Shakeology on Demand!</p>
+					<p class="name">please provide your name</p>
+					<form>
+						<div class="input-wrapper">
+							<input type="text" placeholder="name"/>
+						</div>
+						<div class="button-container">
+							<button class="button submit-name">submit name</button>
+						</div>
+					</form>
+				</div>
+
+				<div class="bar-closed-container">
+					<i class="fa fa-clock-o"></i>
+					<p class="closed-msg">We know you really need your shake, but the bar is closed </p>
+					<p class="check-msg">Check back soon!</p>
+					
+				</div>
+				
+				<div class="homepage-container">
+					<p class="welcome-msg">Welcome to <br/>Shakeology on Demand!</p>
+					<div class="homepage-buttons">
+						<a href="void" class="button custom">custom order</a>
+						<a href="void" class="button menu">menu</a>
+						<a href="void" class="button randomize">randomize</a>
+					</div>
+				</div>
+
+				<div class="customization-container">
+					<div class="customization-tabs">
+						<a href="void" class="active">flavor</a>
+						<a href="void">base</a>
+						<a href="void">add-ons</a>
+						<a href="void">boost</a>
+					</div>
+			
+					<div class="customization-panel">
+						<ul class="list">
+							<li>
+								<input id="chocolate" class="checkbox-custom" name="chocolate" type="checkbox" value="chocolate">
+								<label for="chocolate"class="checkbox-custom-label">chocolate</label>
+							</li>
+							<li>
+								<input id="vegan-chocolate" class="checkbox-custom" name="vegan-chocolate" type="checkbox" value="vegan-chocolate">
+								<label for="vegan-chocolate"class="checkbox-custom-label">vegan chocolate</label>
+							</li>
+							<li>
+								<input id="strawberry" class="checkbox-custom" name="strawberry" type="checkbox" value="strawberry">
+								<label for="strawberry"class="checkbox-custom-label">strawberry</label>
+							</li>
+							<li>
+								<input id="tropical-strawberry" class="checkbox-custom" name="tropical-strawberry" type="checkbox" value="tropical-strawberry">
+								<label for="tropical-strawberry"class="checkbox-custom-label">tropical strawberry</label>
+							</li>
+							<li>
+								<input id="vanilla" class="checkbox-custom" name="vanilla" type="checkbox" value="vanilla">
+								<label for="vanilla"class="checkbox-custom-label">vanilla</label>
+							</li>
+							<li>
+								<input id="Greenberry" class="checkbox-custom" name="Greenberry" type="checkbox" value="Greenberry">
+								<label for="Greenberry"class="checkbox-custom-label">Greenberry</label>
+							</li>
+							<li>
+								<input id="cafe-latte" class="checkbox-custom" name="cafe-latte" type="checkbox" value="cafe-latte">
+								<label for="cafe-latte"class="checkbox-custom-label">cafe latte</label>
+							</li>
+						</ul>
+						<a href="void" class="next">Choose Base <i class="fa fa-angle-double-right"></i></a>
+					</div>
+				</div>
+				<div class="menu-container">
+					<h2>Menu</h2>
+					<div class="menu-buttons">
+						<a class="menu-button ashley-special"><span>Ashley Special</span></a>
+						<a class="menu-button choco-blast"><span>Choco Blast</span></a>
+						<a class="menu-button daphne-special"><span>Daphne Special</span></a>
+						<a class="menu-button dbz"><span>DBZ</span></a>
+						<a class="menu-button dragons-den"><span>Dragons Den</span></a>
+						<a class="menu-button funky-monkey"><span>Funky Monkey</span></a>
+						<a class="menu-button garrison"><span>Garrison's Choco Paradise</span></a>
+						<a class="menu-button incredible-hulk"><span>Incredible Hulk</span></a>
+						<a class="menu-button lite-fit"><span>Lite &amp; Fit</span></a>
+						<a class="menu-button nima-choco"><span>Nima's Choco Wreck</span></a>
+						<a class="menu-button recess-cup"><span>Recess Cup</span></a>
+						<a class="menu-button skye-special"><span>Skye Special</span></a>
+						<a class="menu-button strawberries-creme"><span>Strawberries N' Creme</span></a>
+						<a class="menu-button strawberry-island"><span>Strawberry Island</span></a>			
+						<a class="menu-button vanilla-bliss"><span>Vanilla Bliss &amp; Focus Energy</span></a>
+						<a class="menu-button vanilla-creme"><span>Vanilla Creme</span></a>
+					</div>
+				</div>
+				
+				<div class="review-container">
+					<h2>Confirm Your Order</h2>
+					<div class="review-panel">
+						<p class="review-item flavor">Flavor: <span>chocolate</span></p>
+						<p class="review-item base">Base: <span>non-fat milk, water</span></p>
+						<p class="review-item base">Add-Ons: <span>Banana, Cinnamon</span></p>
+						<p class="review-item base">Boosts: <span>Digestive Health</span></p>
+					</div>
+					<div class="instructions-panel">
+						<textarea placeholder="special instructions" rows="5"></textarea>
+					</div>
+					<div class="button-container">
+						<button class="button edit-order">Edit Order</button>
+						<button class="button place-order">Place Order</button>
+					</div>
+				</div>
+
+				<div class="confirmation-container">
+					<div class="confirmation-panel">
+						<i class="fa fa-check-circle"></i>
+						<p class="status">Order Status: <span>In progress</span></p>
+					</div>
+				</div>
+
+				<div class="past-orders-container">
+					<div class="current-order-panel order-panel">
+						<h2>Current Order</h2>
+						<div class="current-order-list order-list">
+							<div class="order">
+								<div class="header">
+									<p class="date">6 October 2016</p>
+									<a href="void" class="re-order">in progress</a>
+								</div>
+								<div class="details">
+									<p>Flavor: Chocolate</p>
+									<p>Base: Almond, Water</p>
+									<p>Add-Ons: Strawberries</p>
+									<p>Boosts: Digestive Health, Chocolate</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="past-orders-panel order-panel">
+						<h2>Past Orders</h2>
+						<div class="past-orders-list order-list">
+							<div class="order">
+								<div class="header">
+									<p class="date">5 October 2016</p>
+									<a href="void" class="re-order">re-order</a>
+								</div>
+								<div class="details">
+									<p>Flavor: Chocolate</p>
+									<p>Base: Almond, Water</p>
+									<p>Add-Ons: Strawberries</p>
+									<p>Boosts: Digestive Health, Chocolate</p>
+								</div>
+							</div>
+							<div class="order">
+								<div class="header">
+									<p class="date">28 September 2016</p>
+									<a href="void" class="re-order">re-order</a>
+								</div>
+								<div class="details">
+									<p>Flavor: Strawberry</p>
+									<p>Base: 1% Milk, Water</p>
+									<p>Add-Ons: Strawberries</p>
+									<p>Boosts: Energize</p>
+								</div>
+							</div>
+							<div class="order">
+								<div class="header">
+									<p class="date">27 September 2016</p>
+									<a href="void" class="re-order">re-order</a>
+								</div>
+								<div class="details">
+									<p>Flavor: Chocolate</p>
+									<p>Base: Water</p>
+									<p>Add-Ons: Banana, Cinnamon</p>
+									<p>Boosts: Digestive Health, Chocolate</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="current-order-container">
+					<div class="current-order-progress">
+						<span class="first-step"><i class="fa fa-check-circle-o"></i></span>
+						<span class="line"></span>
+						<span class="second-step"><i class="fa fa-circle-o"></i></span>
+						<span class="line"></span>
+						<span class="third-step"><i class="fa fa-circle-o"></i></span>
+					</div>
+					<div class="current-order-panel">
+						<h2>Your Order</h2>
+						<p class="review-current-item flavor">Flavor: <span>chocolate</span></p>
+						<p class="review-current-item base">Base: <span>non-fat milk, water</span></p>
+						<p class="review-current-item base">Add-Ons: <span>Banana, Cinnamon</span></p>
+						<p class="review-current-item base">Boosts: <span>Digestive Health</span></p>
+					</div>
+					<div class="current-instructions-panel">
+						<h2>Special Instructions</h2>
+						<p>Half almond milk and half water</p>
+					</div>
+
+					<div class="button-container">
+						<button class="button cancel-order">Cancel Order</button>
+					</div>
+				</div>
+
+				<div class="badge-container">
+					<h2>Badges</h2>
+					<div class="badge-buttons">
+						<a class="badge-button one-week achieved"><i class="fa fa-calendar-check-o"></i><span>One Week</span></a>
+						<a class="badge-button one-month"><i class="fa fa-calendar"></i><span>One Month</span></a>
+						<a class="badge-button randomize achieved"><i class="fa fa-random"></i><span>Randomized 5 times</span></a>
+						<a class="badge-button created-menu-item"><i class="fa fa-file-text-o"></i><span>Created Menu Item</span></a>
+						<a class="badge-button one-year"><i class="fa fa-graduation-cap"></i><span>One Year</span></a>
+						<a class="badge-button shared-picture achieved"><i class="fa fa-heart"></i><span>Try the Ashley Special</span></a>
+					</div>
+				</div>
+
+			</div>
+			<div class="bottom-navigation">
+				<div class="navigation-buttons">
+					<a href="void" class="button homepage"><i class="fa fa-home"></i></a>
+					<a href="void" class="button past-orders"><i class="fa fa-file-text-o"></i></a>
+					<a href="void" class="button badges"><i class="fa fa-trophy"></i></a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+

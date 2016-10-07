@@ -1,0 +1,61 @@
+.past-orders-container {
+	display: none;
+	padding-top: 20px;
+	h2 {
+		font-size: 1.1em;
+		margin: 0 0 5px 0;
+	}
+	.order-panel {
+		max-width: 90%;
+		margin: 0 auto;
+		.order {
+			border: 2px solid #605f5f;
+			padding: 10px;
+			position: relative;
+			margin-bottom: 10px;
+			.header {
+				margin-bottom: 1.5em;
+				p {
+					margin: 0;
+					font-size: .9em;
+					color: #000;
+					font-weight: bold;
+				}
+				a {
+					position: absolute;
+					top: 3px;
+					right: 3px;
+					border: 1px solid $green;
+					background: $green;
+					color: $white;
+					font-size: .9em;
+					padding: 8px;
+					text-decoration: none;
+					font-weight: bold;
+				}
+			}
+			.details {
+				p {
+					margin: 0 0 .9em 0;
+					font-size: .9em;
+					color: #605f5f;
+				}
+			}
+		}
+		&.current-order-panel {
+			margin-bottom: 2em;
+			display: none;
+			&.active {
+				display: block;
+			}
+			.order {
+				.header {
+					a {
+						background-color: $gold;
+						border-color: $gold;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,91 @@
+.customization-container {
+	display: none;
+	padding-top: 40px;
+	.customization-tabs {
+		@include clearfix;
+		a {
+			float: left;
+			border: 1px solid $darkgreen;
+			display: block;
+			width: 22%;
+			text-align: center;
+			text-decoration: none;
+			color: $darkgreen;
+			font-weight: 600;
+			margin: 1%;
+			background: $white;
+			text-transform: uppercase;
+			padding: 8px 0;
+			font-size: .9em;
+			&.active {
+				background-color: $green;
+				color: #fff;
+			}
+		}
+	}
+	.customization-panel {
+		padding-top: 20px;
+		.list {
+			padding-left: 20px;
+			li {
+				list-style-type: none;
+				font-size: 1.2em;
+				padding-bottom: .6em;
+
+				.checkbox-custom {
+				    opacity: 0;
+				    position: absolute;
+				    display: inline-block;
+				    vertical-align: middle;
+				    margin: 5px;
+				    cursor: pointer;
+				}
+
+				.checkbox-custom-label {
+				    display: inline-block;
+				    vertical-align: middle;
+				    margin: 5px;
+				    cursor: pointer;
+				    position: relative;
+				    text-transform: uppercase;
+				    color: #6d6a6a;
+				}
+
+				.checkbox-custom + .checkbox-custom-label:before {
+				    content: '';
+				    background: #fff;
+				    border: 2px solid #888;
+				    display: inline-block;
+				    vertical-align: middle;
+				    width: 20px;
+				    height: 20px;
+				    padding: 2px;
+				    margin-right: 10px;
+				    text-align: center;
+				}
+
+				.checkbox-custom:checked + .checkbox-custom-label:before {
+				    background: $green;
+				}
+
+
+
+				.checkbox-custom:focus + .checkbox-custom-label {
+				  outline: 1px solid #888; /* focus style */
+				}
+
+
+			}
+		}
+	}
+	.next {
+		color: $green;
+		text-decoration: none;
+		position: absolute;
+		right: 20px;
+		text-transform: uppercase;
+		bottom: 80px;
+	}
+}
+
+

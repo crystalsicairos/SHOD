@@ -1,0 +1,62 @@
+body {
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #f3f3f3;
+}
+* {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+$green: #6cc24a;
+$darkgrey: #7e847d;
+$lightgrey: #c1c1c1;
+$white: #ffffff;
+$black: #000000;
+$gold: #febf16;
+$darkgreen: #1d7102;
+
+@mixin clearfix {
+	&:before,
+	&:after {
+	    content: "";
+	    display: table;
+	}
+	&:after {
+	    clear: both;
+	}
+}
+
+.main-container {
+	.content-wrapper {
+		padding-bottom: 50px;
+	}
+}
+
+
+@import "sass/header";
+@import "sass/navigation";
+@import "sass/homepage";
+@import "sass/customize";
+@import "sass/menu";
+@import "sass/review";
+@import "sass/confirmation";
+@import "sass/past-orders";
+@import "sass/current-order";
+@import "sass/badges";
+@import "sass/welcome";
+@import "sass/closed";
+
+@import "sass/fontawesome/variables";
+@import "sass/fontawesome/mixins";
+@import "sass/fontawesome/path";
+@import "sass/fontawesome/core";
+@import "sass/fontawesome/larger";
+@import "sass/fontawesome/fixed-width";
+@import "sass/fontawesome/list";
+@import "sass/fontawesome/bordered-pulled";
+@import "sass/fontawesome/animated";
+@import "sass/fontawesome/rotated-flipped";
+@import "sass/fontawesome/stacked";
+@import "sass/fontawesome/icons";
+@import "sass/fontawesome/screen-reader";
+

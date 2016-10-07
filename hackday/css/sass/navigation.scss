@@ -1,0 +1,26 @@
+.bottom-navigation {
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	background: #8e8e8e;
+	.navigation-buttons {
+		@include clearfix;
+		.button {
+			width: 32.5%;
+			float: left;
+			text-align: center;
+			color: $white;
+			border-right: 2px solid $white;
+			&.badges {
+				border-right: none;
+			}
+			&:active {
+				box-shadow: inset 0px 1px 21px #656363;
+			}
+			i {
+				font-size: 20px;
+				padding: 11px;
+			}
+		}
+	}
+}

@@ -1,0 +1,51 @@
+.welcome-container {
+	display: none;
+	background-image: url("../images/shakes-bkg.png");
+	background-size: 90%;
+	background-repeat: no-repeat;
+	background-position: center 20px;
+	max-width: 300px;
+	margin: 0 auto;
+	.welcome-msg {
+		text-align: center;
+		padding-top: 70px;
+		margin-bottom: 70px;
+		font-size: 1.6em;
+		color: $darkgrey;
+		font-weight: bold;
+		margin-top: 0;
+	}
+	.name {
+		text-align: center;
+		font-weight: bold;
+		color: $darkgrey;
+		margin:0 0 5px 0;
+	}
+	form {
+		input {
+			width: 100%;
+			padding: 8px;
+			box-sizing: border-box;
+		}
+		.button-container {
+			margin-top: 2em;
+			button {
+				color: $white;
+				text-align: center;
+				width: 100%;
+				border:0;
+				outline: none;
+				font-size: 1em;
+				font-weight: bold;
+				text-transform: uppercase;
+				padding: 20px 0;
+				border-radius: 4px;
+				background-color: $green;
+				&:active {
+					box-shadow: inset 0px 1px 21px #307314;
+				}
+				
+			}
+		}
+	}
+}

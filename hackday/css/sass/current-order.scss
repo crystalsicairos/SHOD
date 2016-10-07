@@ -1,0 +1,72 @@
+.current-order-container {
+	padding-top: 20px;
+	max-width: 300px;
+	margin: 0 auto;
+	display: none;
+	h2 {
+		color: #605f5f;
+		text-align: left;
+		font-size: 1.1em;
+		margin: 0 0 5px 0;
+	}
+	.current-order-progress {
+		text-align: center;
+		margin-bottom: 20px;
+		span {
+			i {
+				font-size: 2em;
+				color: #605f5f;
+				&.fa-check-circle-o {
+					color: $green;
+				}
+
+			}
+			&.line {
+				display: inline-block;
+				width: 70px;
+				height: 2px;
+				background-color: #605f5f;
+				margin-bottom:10px;
+			}
+		}
+	}
+	.current-order-panel {
+		.review-current-item {
+			padding-left: 1em;
+			font-weight: 600;
+			margin: 1em 0;
+			font-size: .9em;
+			color: #605f5f;
+			span {
+				font-weight: 100;
+			}
+		}
+	}
+	.current-instructions-panel {
+		p {
+			color: #605f5f;
+			padding-left: 1em;
+			font-size: .9em;
+		}
+	}
+	.button-container {
+		margin-top: 2em;
+		button {
+			color: $white;
+			text-align: center;
+			width: 100%;
+			border:0;
+			outline: none;
+			font-size: 1em;
+			font-weight: bold;
+			text-transform: uppercase;
+			padding: 20px 0;
+			border-radius: 4px;
+			background-color: #bc0505;
+			&:active {
+				box-shadow: inset 0px 1px 21px #656363;
+			}
+			
+		}
+	}
+}
