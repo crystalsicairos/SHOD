@@ -431,6 +431,19 @@ body {
   .current-order-container .current-order-progress {
     text-align: center;
     margin-bottom: 20px; }
+    .current-order-container .current-order-progress:before, .current-order-container .current-order-progress:after {
+      content: "";
+      display: table; }
+    .current-order-container .current-order-progress:after {
+      clear: both; }
+    .current-order-container .current-order-progress span.step {
+      float: left;
+      width: 65px; }
+      .current-order-container .current-order-progress span.step .text {
+        display: block;
+        font-size: .6em; }
+    .current-order-container .current-order-progress span.line {
+      float: left; }
     .current-order-container .current-order-progress span i {
       font-size: 2em;
       color: #605f5f; }
@@ -438,10 +451,10 @@ body {
         color: #6cc24a; }
     .current-order-container .current-order-progress span.line {
       display: inline-block;
-      width: 70px;
+      width: 52px;
       height: 2px;
       background-color: #605f5f;
-      margin-bottom: 10px; }
+      margin-top: 13px; }
   .current-order-container .current-order-panel .review-current-item {
     padding-left: 1em;
     font-weight: 600;
