@@ -12,7 +12,19 @@
 	.current-order-progress {
 		text-align: center;
 		margin-bottom: 20px;
+		@include clearfix;
 		span {
+			&.step {
+				float: left;
+				width: 65px;
+				.text {
+					display: block;
+					font-size: .6em;
+				}
+			}
+			&.line {
+				float: left;
+			}
 			i {
 				font-size: 2em;
 				color: #605f5f;
@@ -23,10 +35,10 @@
 			}
 			&.line {
 				display: inline-block;
-				width: 70px;
+				width: 52px;
 				height: 2px;
 				background-color: #605f5f;
-				margin-bottom:10px;
+				margin-top:13px;
 			}
 		}
 	}
