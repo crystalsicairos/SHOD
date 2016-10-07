@@ -1,18 +1,21 @@
-.confirmation-container {
+.cancellation-container {
 	padding-top: 20px;
 	display: none;
-	.confirmation-panel {
+	.cancellation-panel {
 		text-align: center;
+		max-width: 300px;
+		margin: 0 auto;
 		i {
 			font-size: 9em;
 			text-align: center;
 			color: $green;
 		}
-		.status {
+		.cancel-msg {
 			margin-top: 2em;
 			font-size: 1em;
 			text-transform: uppercase;
 			font-weight: bold;
+			color: $darkgrey;
 			span {
 				color: $gold;
 			}
@@ -21,11 +24,14 @@
 	.button-container {
 		max-width: 300px;
 		margin: 2em auto 0;
+		@include clearfix;
 		button {
 			color: $white;
 			text-align: center;
-			width: 100%;
+			width: 48%;
+			margin: 1%;
 			border:0;
+			float: left;
 			outline: none;
 			font-size: 1em;
 			font-weight: bold;
@@ -34,7 +40,7 @@
 			border-radius: 4px;
 			background-color: #bc0505;
 			margin-top: 10px;
-			&.home {
+			&.no-cancel {
 				background-color: $green;
 				&:active {
 					box-shadow: inset 0px 1px 21px #307314;

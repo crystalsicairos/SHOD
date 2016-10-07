@@ -8,9 +8,13 @@ $( document ).ready(function() {
 		});
 	});
 
+	$('.hamburger').click(function(){
+		$(".side-menu").slideToggle();
+	});
 
-
-
+	$(".side-menu a").click(function(){
+		$(".side-menu").slideToggle();
+	});
 
 
 	$('body').on("click", ".click-trigger", function(e) {  
@@ -19,8 +23,17 @@ $( document ).ready(function() {
       e.preventDefault();
       $(containerToOpen).addClass("active-container");
       $(containerToOpen).show();
-      
-  });
+   		
+   		if($(this).hasClass("place-order")){
+			$(".progress-bar").show();
+			$(".past-orders-container .current-order-panel").show();
+		}
+
+  	});
+
+
+
+
 
 	$('body').on("click", ".customization-tabs a", function(e) {  
       $('.active-list').hide();
@@ -32,6 +45,7 @@ $( document ).ready(function() {
       $(this).addClass("active");
       
   });
+
 
 
 });

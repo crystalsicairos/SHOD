@@ -32,10 +32,12 @@
 		padding-top: 20px;
 		.list {
 			display: none;
-			padding-left: 20px;
+			max-width: 280px;
+			margin: 0 auto;
+			padding-left: 0;
 			li {
 				list-style-type: none;
-				font-size: 1.2em;
+				font-size: 1em;
 				padding-bottom: .6em;
 
 				.checkbox-custom {
@@ -79,7 +81,26 @@
 				.checkbox-custom:focus + .checkbox-custom-label {
 				  outline: 1px solid #888; /* focus style */
 				}
-
+				
+				button {
+					color: $white;
+					text-align: center;
+					width: 100%;
+					border:0;
+					outline: none;
+					font-size: 1em;
+					font-weight: bold;
+					text-transform: uppercase;
+					padding: 20px 0;
+					border-radius: 4px;
+					background-color: $green;
+					margin-top: 10px;
+				
+					&:active {
+						box-shadow: inset 0px 1px 21px #307314;
+					}
+					
+				}
 
 			}
 			&.active-list{
@@ -95,6 +116,10 @@
 		text-transform: uppercase;
 		bottom: 80px;
 	}
+
+
+		
+	
 }
 
 

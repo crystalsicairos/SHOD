@@ -23,7 +23,9 @@ body {
     display: block;
     text-decoration: none;
     font-family: Ariel, Helvetica, sans-serif;
-    padding: 10px 0; }
+    padding: 10px 0;
+    max-width: 160px;
+    margin: 0 auto; }
     .global-header .inner-header .logo .icon {
       background-image: url("../images/logo.png");
       text-indent: -999999px;
@@ -53,12 +55,12 @@ body {
   .global-header .progress-bar.active {
     display: block; }
 .global-header .side-menu {
-  position: absolute;
-  width: 90%;
+  width: 100%;
   background-color: #6cc24a;
-  right: 100%; }
+  display: none; }
   .global-header .side-menu ul {
-    padding: 0; }
+    margin: 0;
+    padding: 10px 0; }
     .global-header .side-menu ul li {
       list-style-type: none;
       padding-left: 15px; }
@@ -87,7 +89,7 @@ body {
     text-align: center;
     color: #ffffff;
     border-right: 2px solid #ffffff; }
-    .bottom-navigation .navigation-buttons .button.badges {
+    .bottom-navigation .navigation-buttons .button.nav-badges {
       border-right: none; }
     .bottom-navigation .navigation-buttons .button:active {
       box-shadow: inset 0px 1px 21px #656363; }
@@ -121,12 +123,13 @@ body {
       color: #fff;
       margin: 10px 0;
       border-radius: 4px;
-      font-size: 20px;
+      font-size: 1em;
       font-weight: 600;
       cursor: pointer;
       width: 100%;
       border: 0;
-      outline: none; }
+      outline: none;
+      text-transform: uppercase; }
       .homepage-container .homepage-buttons .button:active {
         box-shadow: inset 0px 1px 21px #307314; }
 
@@ -164,10 +167,12 @@ body {
     padding-top: 20px; }
     .customization-container .customization-panel .list {
       display: none;
-      padding-left: 20px; }
+      max-width: 280px;
+      margin: 0 auto;
+      padding-left: 0; }
       .customization-container .customization-panel .list li {
         list-style-type: none;
-        font-size: 1.2em;
+        font-size: 1em;
         padding-bottom: .6em; }
         .customization-container .customization-panel .list li .checkbox-custom {
           opacity: 0;
@@ -200,6 +205,21 @@ body {
         .customization-container .customization-panel .list li .checkbox-custom:focus + .checkbox-custom-label {
           outline: 1px solid #888;
           /* focus style */ }
+        .customization-container .customization-panel .list li button {
+          color: #ffffff;
+          text-align: center;
+          width: 100%;
+          border: 0;
+          outline: none;
+          font-size: 1em;
+          font-weight: bold;
+          text-transform: uppercase;
+          padding: 20px 0;
+          border-radius: 4px;
+          background-color: #6cc24a;
+          margin-top: 10px; }
+          .customization-container .customization-panel .list li button:active {
+            box-shadow: inset 0px 1px 21px #307314; }
       .customization-container .customization-panel .list.active-list {
         display: block; }
   .customization-container .next {
@@ -330,6 +350,28 @@ body {
       font-weight: bold; }
       .confirmation-container .confirmation-panel .status span {
         color: #febf16; }
+  .confirmation-container .button-container {
+    max-width: 300px;
+    margin: 2em auto 0; }
+    .confirmation-container .button-container button {
+      color: #ffffff;
+      text-align: center;
+      width: 100%;
+      border: 0;
+      outline: none;
+      font-size: 1em;
+      font-weight: bold;
+      text-transform: uppercase;
+      padding: 20px 0;
+      border-radius: 4px;
+      background-color: #bc0505;
+      margin-top: 10px; }
+      .confirmation-container .button-container button.home {
+        background-color: #6cc24a; }
+        .confirmation-container .button-container button.home:active {
+          box-shadow: inset 0px 1px 21px #307314; }
+      .confirmation-container .button-container button:active {
+        box-shadow: inset 0px 1px 21px #656363; }
 
 .past-orders-container {
   display: none;
@@ -536,6 +578,55 @@ body {
     font-size: 4em;
     color: #7e847d;
     padding-top: 30px; }
+
+.cancellation-container {
+  padding-top: 20px;
+  display: none; }
+  .cancellation-container .cancellation-panel {
+    text-align: center;
+    max-width: 300px;
+    margin: 0 auto; }
+    .cancellation-container .cancellation-panel i {
+      font-size: 9em;
+      text-align: center;
+      color: #6cc24a; }
+    .cancellation-container .cancellation-panel .cancel-msg {
+      margin-top: 2em;
+      font-size: 1em;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: #7e847d; }
+      .cancellation-container .cancellation-panel .cancel-msg span {
+        color: #febf16; }
+  .cancellation-container .button-container {
+    max-width: 300px;
+    margin: 2em auto 0; }
+    .cancellation-container .button-container:before, .cancellation-container .button-container:after {
+      content: "";
+      display: table; }
+    .cancellation-container .button-container:after {
+      clear: both; }
+    .cancellation-container .button-container button {
+      color: #ffffff;
+      text-align: center;
+      width: 48%;
+      margin: 1%;
+      border: 0;
+      float: left;
+      outline: none;
+      font-size: 1em;
+      font-weight: bold;
+      text-transform: uppercase;
+      padding: 20px 0;
+      border-radius: 4px;
+      background-color: #bc0505;
+      margin-top: 10px; }
+      .cancellation-container .button-container button.no-cancel {
+        background-color: #6cc24a; }
+        .cancellation-container .button-container button.no-cancel:active {
+          box-shadow: inset 0px 1px 21px #307314; }
+      .cancellation-container .button-container button:active {
+        box-shadow: inset 0px 1px 21px #656363; }
 
 /* FONT PATH
  * -------------------------- */

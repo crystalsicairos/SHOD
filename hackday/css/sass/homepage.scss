@@ -25,12 +25,13 @@
 			color: #fff;
 			margin: 10px 0;
 			border-radius: 4px;
-			font-size: 20px;
+			font-size: 1em;
 			font-weight: 600;
 			cursor: pointer;
 			width: 100%;
 			border:0;
 			outline: none;
+			text-transform: uppercase;
 			&:active {
 				box-shadow: inset 0px 1px 21px #307314;
 			}

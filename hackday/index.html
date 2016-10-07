@@ -12,22 +12,22 @@
 		<div class="main-container">
 			<header class="global-header">
 				<div class="inner-header">
-					<a href="void" class="hamburger"><i class="fa fa-bars"></i></a>
+					<a href="javascript:void(0)" class="hamburger"><i class="fa fa-bars"></i></a>
 					<a href="javascript:void(0)" class="logo click-trigger" data-open-container="homepage-container"><span class="icon">Shakeology</span> <span class="text">On Demand</span></a>
 				</div>
-				<div class="progress-bar" data-open-container="current-order-container"><i class="fa fa-coffee"></i> Order In Progress</div>
+				<div class="progress-bar click-trigger" data-open-container="current-order-container"><i class="fa fa-coffee"></i> Order In Progress</div>
 				<div class="side-menu">
 					<ul>
-						<li><a href="void">Home</a></li>
-						<li><a href="void">Ingredients</a></li>
-						<li><a href="void">Shake Ideas</a></li>
-						<li><a href="void">My Orders</a></li>
+						<li><a href="javascript:void(0)" class="click-trigger" data-open-container="homepage-container">Home</a></li>
+						<li><a href="https://faq.beachbody.com/app/answers/list/lob/shake" target="_blank">Ingredients</a></li>
+						<li><a href="http://www.shakeology.com/shake-recipes" target="_blank">Shake Ideas</a></li>
+						<li><a href="javascript:void(0)" class="click-trigger" data-open-container="past-orders-container">My Orders</a></li>
 					</ul>
 				</div>
 			</header>
 			<div class="content-wrapper">
 				
-				<div class="welcome-container container" id="welcome-container">
+				<div class="welcome-container container active-container" id="welcome-container">
 					<p class="welcome-msg">Welcome to <br/>Shakeology on Demand!</p>
 					<p class="name">please provide your name</p>
 					<form>
@@ -152,28 +152,29 @@
 								<input id="power-greens" class="checkbox-custom" name="power-greens" type="checkbox" value="power-greens">
 								<label for="power-greens"class="checkbox-custom-label">Power Greens</label>
 							</li>
+							<li><button class="button click-trigger submit-order" data-open-container="review-container">Submit Order</button>
 						</ul>
 					</div>
 				</div>
 				<div class="menu-container container" id="menu-container">
 					<h2>Menu</h2>
 					<div class="menu-buttons">
-						<a class="menu-button ashley-special"><span>Ashley Special</span></a>
-						<a class="menu-button choco-blast"><span>Choco Blast</span></a>
-						<a class="menu-button daphne-special"><span>Daphne Special</span></a>
-						<a class="menu-button dbz"><span>DBZ</span></a>
-						<a class="menu-button dragons-den"><span>Dragons Den</span></a>
-						<a class="menu-button funky-monkey"><span>Funky Monkey</span></a>
-						<a class="menu-button garrison"><span>Garrison's Choco Paradise</span></a>
-						<a class="menu-button incredible-hulk"><span>Incredible Hulk</span></a>
-						<a class="menu-button lite-fit"><span>Lite &amp; Fit</span></a>
-						<a class="menu-button nima-choco"><span>Nima's Choco Wreck</span></a>
-						<a class="menu-button recess-cup"><span>Recess Cup</span></a>
-						<a class="menu-button skye-special"><span>Skye Special</span></a>
-						<a class="menu-button strawberries-creme"><span>Strawberries N' Creme</span></a>
-						<a class="menu-button strawberry-island"><span>Strawberry Island</span></a>			
-						<a class="menu-button vanilla-bliss"><span>Vanilla Bliss &amp; Focus Energy</span></a>
-						<a class="menu-button vanilla-creme"><span>Vanilla Creme</span></a>
+						<a data-open-container="customization-container" class="menu-button click-trigger ashley-special"><span>Ashley Special</span></a>
+						<a data-open-container="customization-container" class="menu-button click-trigger choco-blast"><span>Choco Blast</span></a>
+						<a data-open-container="customization-container" class="menu-button click-trigger daphne-special"><span>Daphne Special</span></a>
+						<a data-open-container="customization-container" class="menu-button click-trigger dbz"><span>DBZ</span></a>
+						<a data-open-container="customization-container" class="menu-button click-trigger dragons-den"><span>Dragons Den</span></a>
+						<a data-open-container="customization-container" class="menu-button click-trigger funky-monkey"><span>Funky Monkey</span></a>
+						<a data-open-container="customization-container" class="menu-button click-trigger garrison"><span>Garrison's Choco Paradise</span></a>
+						<a data-open-container="customization-container" class="menu-button click-trigger incredible-hulk"><span>Incredible Hulk</span></a>
+						<a data-open-container="customization-container" class="menu-button click-trigger lite-fit"><span>Lite &amp; Fit</span></a>
+						<a data-open-container="customization-container" class="menu-button click-trigger nima-choco"><span>Nima's Choco Wreck</span></a>
+						<a data-open-container="customization-container" class="menu-button click-trigger recess-cup"><span>Recess Cup</span></a>
+						<a data-open-container="customization-container" class="menu-button click-trigger skye-special"><span>Skye Special</span></a>
+						<a data-open-container="customization-container" class="menu-button click-trigger strawberries-creme"><span>Strawberries N' Creme</span></a>
+						<a data-open-container="customization-container" class="menu-button click-trigger strawberry-island"><span>Strawberry Island</span></a>			
+						<a data-open-container="customization-container" class="menu-button click-trigger vanilla-bliss"><span>Vanilla Bliss &amp; Focus Energy</span></a>
+						<a data-open-container="customization-container" class="menu-button click-trigger vanilla-creme"><span>Vanilla Creme</span></a>
 					</div>
 				</div>
 				
@@ -189,8 +190,8 @@
 						<textarea placeholder="special instructions" rows="5"></textarea>
 					</div>
 					<div class="button-container">
-						<button class="button edit-order">Edit Order</button>
-						<button class="button place-order">Place Order</button>
+						<button class="button click-trigger edit-order" data-open-container="customization-container">Edit Order</button>
+						<button class="button click-trigger place-order" data-open-container="confirmation-container">Place Order</button>
 					</div>
 				</div>
 
@@ -198,6 +199,20 @@
 					<div class="confirmation-panel">
 						<i class="fa fa-check-circle"></i>
 						<p class="status">Order Status: <span>In progress</span></p>
+					</div>
+					<div class="button-container">
+						<button class="button click-trigger cancel-order" data-open-container="cancellation-container">Cancel Order</button>
+						<button class="button click-trigger home" data-open-container="homepage-container">Back home</button>
+					</div>
+				</div>
+
+				<div class="cancellation-container container" id="cancellation-container">
+					<div class="cancellation-panel">
+						<p class="cancel-msg">Are you sure you want to cancel?</p>
+						<div class="button-container">
+							<button class="button click-trigger yes-cancel" data-open-container="homepage-container">Yes</button>
+							<button class="button click-trigger no-cancel" data-open-container="homepage-container">No</button>
+						</div>
 					</div>
 				</div>
 
@@ -208,7 +223,7 @@
 							<div class="order">
 								<div class="header">
 									<p class="date">6 October 2016</p>
-									<a href="void" class="re-order">in progress</a>
+									<a href="javascript:void(0)" class="click-trigger in-progress" data-open-container="current-order-container">in progress</a>
 								</div>
 								<div class="details">
 									<p>Flavor: Chocolate</p>
@@ -225,7 +240,7 @@
 							<div class="order">
 								<div class="header">
 									<p class="date">5 October 2016</p>
-									<a href="void" class="re-order">re-order</a>
+									<a href="javascript:void(0)" class="re-order click-trigger" data-open-container="customization-container">re-order</a>
 								</div>
 								<div class="details">
 									<p>Flavor: Chocolate</p>
@@ -237,7 +252,7 @@
 							<div class="order">
 								<div class="header">
 									<p class="date">28 September 2016</p>
-									<a href="void" class="re-order">re-order</a>
+									<a href="javascript:void(0)" class="re-order click-trigger" data-open-container="customization-container">re-order</a>
 								</div>
 								<div class="details">
 									<p>Flavor: Strawberry</p>
@@ -249,7 +264,7 @@
 							<div class="order">
 								<div class="header">
 									<p class="date">27 September 2016</p>
-									<a href="void" class="re-order">re-order</a>
+									<a href="javascript:void(0)" class="re-order click-trigger" data-open-container="customization-container">re-order</a>
 								</div>
 								<div class="details">
 									<p>Flavor: Chocolate</p>
@@ -283,7 +298,7 @@
 					</div>
 
 					<div class="button-container">
-						<button class="button cancel-order">Cancel Order</button>
+						<button class="button click-trigger cancel-order" data-open-container="cancellation-container">Cancel Order</button>
 					</div>
 				</div>
 
