@@ -2,11 +2,12 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>Shakeology on Demand</title>
-		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-		<link rel="stylesheet" href="./css/main.css">
-		<script type="text/javascript" src="./js/main.js"></script>
 		<meta name="viewport" id="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=1">
+		<title>Shakeology on Demand</title>
+		<link rel="stylesheet" href="./css/main.css">
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script type="text/javascript" src="./js/IgnitionService.js"></script>
+		<script type="text/javascript" src="./js/main.js"></script>
 	</head>
 	<body>
 		<div class="main-container">
@@ -58,10 +59,10 @@
 
 				<div class="customization-container container" id="customization-container">
 					<div class="customization-tabs">
-						<a href="javascript:void(0)" data-open-custom="flavor-list" class="active">flavor</a>
+						<a href="javascript:void(0)" data-open-custom="flavors-list" class="active">flavor</a>
 						<a href="javascript:void(0)" data-open-custom="base-list">base</a>
-						<a href="javascript:void(0)" data-open-custom="add-ons-list">add-ons</a>
-						<a href="javascript:void(0)" data-open-custom="boost-list">boost</a>
+						<a href="javascript:void(0)" data-open-custom="add-ins-list">add-ins</a>
+						<a href="javascript:void(0)" data-open-custom="boosts-list">boost</a>
 					</div>
 			
 					<div class="customization-panel">
@@ -121,7 +122,7 @@
 								<label for="coffee" class="checkbox-custom-label">Coffee</label>
 							</li>
 						</ul>
-						<ul class="list add-ons" id="add-ons-list">
+						<ul class="list add-ins" id="add-ins-list">
 							<li>
 								<input id="cinnamon" class="checkbox-custom" name="cinnamon" type="checkbox" value="cinnamon">
 								<label for="cinnamon"class="checkbox-custom-label">Cinnamon</label>
@@ -152,7 +153,6 @@
 								<input id="power-greens" class="checkbox-custom" name="power-greens" type="checkbox" value="power-greens">
 								<label for="power-greens"class="checkbox-custom-label">Power Greens</label>
 							</li>
-							<li><button class="button click-trigger submit-order" data-open-container="review-container">Submit Order</button>
 						</ul>
 					</div>
 				</div>
@@ -181,13 +181,13 @@
 				<div class="review-container container" id="review-container" >
 					<h2>Confirm Your Order</h2>
 					<div class="review-panel">
-						<p class="review-item flavor">Flavor: <span>chocolate</span></p>
-						<p class="review-item base">Base: <span>non-fat milk, water</span></p>
-						<p class="review-item base">Add-Ons: <span>Banana, Cinnamon</span></p>
-						<p class="review-item base">Boosts: <span>Digestive Health</span></p>
+						<p class="review-item Flavors-review">Flavor: <span>chocolate</span></p>
+						<p class="review-item Base-review">Base: <span>non-fat milk, water</span></p>
+						<p class="review-item Add-Ins-review">Add-Ins: <span>Banana, Cinnamon</span></p>
+						<p class="review-item Boosts-review">Boosts: <span>Digestive Health</span></p>
 					</div>
 					<div class="instructions-panel">
-						<textarea placeholder="special instructions" rows="5"></textarea>
+						<textarea id="special-instructions" placeholder="special instructions" rows="5"></textarea>
 					</div>
 					<div class="button-container">
 						<button class="button click-trigger edit-order" data-open-container="customization-container">Edit Order</button>
@@ -228,7 +228,7 @@
 								<div class="details">
 									<p>Flavor: Chocolate</p>
 									<p>Base: Almond, Water</p>
-									<p>Add-Ons: Strawberries</p>
+									<p>Add-Ins: Strawberries</p>
 									<p>Boosts: Digestive Health, Chocolate</p>
 								</div>
 							</div>
@@ -245,7 +245,7 @@
 								<div class="details">
 									<p>Flavor: Chocolate</p>
 									<p>Base: Almond, Water</p>
-									<p>Add-Ons: Strawberries</p>
+									<p>Add-Ins: Strawberries</p>
 									<p>Boosts: Digestive Health, Chocolate</p>
 								</div>
 							</div>
@@ -257,7 +257,7 @@
 								<div class="details">
 									<p>Flavor: Strawberry</p>
 									<p>Base: 1% Milk, Water</p>
-									<p>Add-Ons: Strawberries</p>
+									<p>Add-Ins: Strawberries</p>
 									<p>Boosts: Energize</p>
 								</div>
 							</div>
@@ -269,7 +269,7 @@
 								<div class="details">
 									<p>Flavor: Chocolate</p>
 									<p>Base: Water</p>
-									<p>Add-Ons: Banana, Cinnamon</p>
+									<p>Add-Ins: Banana, Cinnamon</p>
 									<p>Boosts: Digestive Health, Chocolate</p>
 								</div>
 							</div>
@@ -289,7 +289,7 @@
 						<h2>Your Order</h2>
 						<p class="review-current-item flavor">Flavor: <span>chocolate</span></p>
 						<p class="review-current-item base">Base: <span>non-fat milk, water</span></p>
-						<p class="review-current-item base">Add-Ons: <span>Banana, Cinnamon</span></p>
+						<p class="review-current-item base">Add-Ins: <span>Banana, Cinnamon</span></p>
 						<p class="review-current-item base">Boosts: <span>Digestive Health</span></p>
 					</div>
 					<div class="current-instructions-panel">
